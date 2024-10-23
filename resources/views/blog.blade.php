@@ -106,14 +106,14 @@
                         <a href="/" class="nav-item nav-link">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/service" class="nav-item nav-link">Services</a>
-                        <a href="{{ route('blog') }}" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown active">
+                        <a href="{{ route('blog') }}" class="nav-item nav-link active">Blog</a>
+                        <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                 <span class="dropdown-toggle">Company</span>
                             </a>
                             <div class="dropdown-menu">
                                 <a href="/mission" class="dropdown-item">Our Mission</a>
-                                <a href="/vision" class="dropdown-item active">Our Vision</a>
+                                <a href="/vision" class="dropdown-item">Our Vision</a>
                                 <a href="/projects" class="dropdown-item">Our Projects</a>
                                 <a href="/faq" class="dropdown-item">FAQs</a>
                                 <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
@@ -173,119 +173,55 @@
     <!-- Header Start -->
     <div class="container-fluid bg-breadcrumb">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Vision</h4>
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Blogs</h4>
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-primary">Vision</li>
+                <li class="breadcrumb-item active text-primary">Blogs</li>
             </ol>
         </div>
     </div>
     <!-- Header End -->
 
 
-    <!-- Team Start -->
-    <div class="container-fluid team py-5">
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Our Vision</h4>
-                <h1 class="display-4 mb-4">Driving Innovation with Our Expert Team</h1>
-                <p class="mb-0">our vision is to be at the forefront of technological innovation. Our expert team is
-                    dedicated to delivering top-tier solutions that empower businesses worldwide. We strive to create an
-                    inclusive, forward-thinking environment where our clients’ success is our top priority. Together, we
-                    aim to shape the future of technology, one solution at a time.
+                <h4 class="text-primary">Our Blogs</h4>
+                <h1 class="display-4 mb-4">Innovative Solutions We Have Developed</h1>
+                <p class="mb-0">At KisoTech Solutions, we take pride in delivering cutting-edge technological
+                    solutions
+                    tailored to meet the needs of our clients. Our projects span various industries, showcasing our
+                    commitment to innovation, quality, and customer satisfaction. From developing seamless payment
+                    systems to implementing advanced AI services, we strive to create impactful solutions that empower
+                    businesses and enhance user experiences.
                 </p>
             </div>
-
-            <!-- <div class="row g-4">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
-                                        class="fab fa-instagram"></i></a>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+            @foreach ($blogs as $blog)
+                <div class="testimonial-item bg-light rounded">
+                    <div class="row g-0">
+                        {{-- <div class="col-4  col-lg-4 col-xl-3">
+                            <div class="h-100">
+                                <img src="img/testimonial-1.jpg" class="img-fluid h-100 rounded"
+                                    style="object-fit: cover;" alt="">
                             </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">David James</h4>
-                            <p class="mb-0">Profession</p>
+                        </div> --}}
+                        <div class="col-8 col-lg-8 col-xl-9">
+                            <div class="d-flex flex-column my-auto text-start p-4">
+                                <h4 class="text-dark mb-0">{{ $blog->title }}</h4>
+                                <p class="mb-0">{{ $blog->content }}.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">David James</h4>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">David James</h4>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">David James</h4>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            @endforeach
+        </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Testimonial End -->
 
 
     <!-- Footer Start -->
@@ -332,72 +268,72 @@
                                 </div>
                             </div>
                             <!-- <div class="col-md-6 col-lg-6 col-xl-4">
-                                    <div class="footer-item">
-                                        <h4 class="mb-4 text-white">Instagram</h4>
-                                        <div class="row g-3">
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-1.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-1.jpg"
-                                                            data-lightbox="footerInstagram-1" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                <div class="footer-item">
+                                    <h4 class="mb-4 text-white">Instagram</h4>
+                                    <div class="row g-3">
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-1.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-1.jpg"
+                                                        data-lightbox="footerInstagram-1" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-2.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-2.jpg"
-                                                            data-lightbox="footerInstagram-2" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-2.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-2.jpg"
+                                                        data-lightbox="footerInstagram-2" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-3.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-3.jpg"
-                                                            data-lightbox="footerInstagram-3" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-3.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-3.jpg"
+                                                        data-lightbox="footerInstagram-3" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-4.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-4.jpg"
-                                                            data-lightbox="footerInstagram-4" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-4.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-4.jpg"
+                                                        data-lightbox="footerInstagram-4" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-5.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-5.jpg"
-                                                            data-lightbox="footerInstagram-5" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-5.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-5.jpg"
+                                                        data-lightbox="footerInstagram-5" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-6.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-6.jpg"
-                                                            data-lightbox="footerInstagram-6" class="my-auto"><i
-                                                                class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-6.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-6.jpg"
+                                                        data-lightbox="footerInstagram-6" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
@@ -483,8 +419,8 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <span class="text-body"><a href="#" class="border-bottom text-white">
-                            <i class="fas fa-copyright text-light me-2">2024</i>Kisotech Solutions</a>, All right
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2">2024</i>Kisotech Solutions</a>, All right
                         reserved.</span>
                 </div>
                 <div class="col-md-6 text-center text-md-start text-body">

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Blog;
 
 use Illuminate\Http\Request;
 
@@ -17,6 +18,11 @@ class ViewController extends Controller
     }
     public function mission(){
         return view('mission');
+    }
+
+    public function blogs(){
+        $blogs = Blog::all();
+        return view('blog' , compact('blogs'));
     }
     public function vision(){
         return view('vision');

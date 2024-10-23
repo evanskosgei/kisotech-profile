@@ -79,6 +79,9 @@
                                 <a href="#" class="dropdown-item">Arabic</a>
                             </div>
                         </div>
+                        {{-- <div class="border-primary pe-3"> --}}
+                            <a class="btn p-0 text-primary me-3" href="/home" ><i class="fab bi bi-file-lock2-fill"></i>Login</a>
+                        {{-- </div> --}}
                     </div>
                 </div>
             </div>
@@ -105,7 +108,7 @@
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/service" class="nav-item nav-link">Services</a>
-                        <!-- <a href="blog.html" class="nav-item nav-link">Blog</a> -->
+                        <a href="{{ route('blog') }}" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                 <span class="dropdown-toggle">Company</span>
